@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
                 const Upside(
                   imgUrl: "assets/images/login.png",
                 ),
-                const PageTitleBar(title: 'Login to your account'),
+                const PageTitleBar(title: 'Login dengan akun'),
                 Padding(
                   padding: const EdgeInsets.only(top: 320.0),
                   child: Container(
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                           height: 20,
                         ),
                         const Text(
-                          "or use your email account",
+                          "Atau gunakan Email anda",
                           style: TextStyle(
                               color: Colors.grey,
                               fontFamily: 'OpenSans',
@@ -64,8 +64,8 @@ class LoginScreen extends StatelessWidget {
                                 height: 10,
                               ),
                               UnderPart(
-                                  title: "Don't have an account?",
-                                  navigatorText: "Register here",
+                                  title: "Belum punya akun?",
+                                  navigatorText: "Sign Up!",
                                   onTap: () {
                                     Navigator.push(
                                         context,
@@ -75,15 +75,6 @@ class LoginScreen extends StatelessWidget {
                                   }),
                               const SizedBox(
                                 height: 20,
-                              ),
-                              const Text(
-                                'Forgot password?',
-                                style: TextStyle(
-                                  color: kPrimaryColor,
-                                  fontFamily: 'OpenSans',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 13,
-                                ),
                               ),
                               const SizedBox(
                                 height: 20,

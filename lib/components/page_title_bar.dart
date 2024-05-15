@@ -26,7 +26,7 @@ class PageTitleBar extends StatelessWidget {
               textAlign: TextAlign.center,
               style: const TextStyle(
                   fontFamily: 'OpenSans',
-                  fontSize: 20,
+                  fontSize: 19,
                   letterSpacing: 1,
                   fontWeight: FontWeight.bold,
                   color: Color(0xfff575861)),

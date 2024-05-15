@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class RoundedIcon extends StatelessWidget {
-  const RoundedIcon({Key? key, required this.imageUrl}) : super(key: key);
+  const RoundedIcon({
+    Key? key,
+    required this.imageUrl,
+  }) : super(key: key);
   final String imageUrl;
 
   @override

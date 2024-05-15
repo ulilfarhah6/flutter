@@ -6,9 +6,14 @@ import 'package:projek_akhir/constants.dart';
 import 'package:projek_akhir/screens/login_screen.dart';
 import 'package:projek_akhir/widgets/widgets.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,15 +25,15 @@ class SignUpScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Stack(
               children: [
-                const Upside(
+                Upside(
                   imgUrl: "assets/images/register.png",
                 ),
-                const PageTitleBar(title: 'Create new account'),
+                PageTitleBar(title: 'Buat akun baru'),
                 Padding(
-                  padding: const EdgeInsets.only(top: 320.0),
+                  padding: EdgeInsets.only(top: 320.0),
                   child: Container(
                     width: double.infinity,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
@@ -37,15 +42,15 @@ class SignUpScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           height: 15,
                         ),
                         iconButton(context),
-                        const SizedBox(
+                        SizedBox(
                           height: 20,
                         ),
-                        const Text(
-                          "or use your email account",
+                        Text(
+                          "Atau buat dengan email",
                           style: TextStyle(
                               color: Colors.grey,
                               fontFamily: 'OpenSans',
@@ -55,13 +60,13 @@ class SignUpScreen extends StatelessWidget {
                         Form(
                           child: Column(
                             children: [
-                              const RoundedInputField(
+                              RoundedInputField(
                                   hintText: "Email", icon: Icons.email),
-                              const RoundedInputField(
+                              RoundedInputField(
                                   hintText: "Nama", icon: Icons.person),
-                              const RoundedPasswordField(),
+                              RoundedPasswordField(),
                               RoundedButton(text: 'REGISTER', press: () {}),
-                              const SizedBox(
+                              SizedBox(
                                 height: 10,
                               ),
                               UnderPart(
@@ -74,19 +79,10 @@ class SignUpScreen extends StatelessWidget {
                                             builder: (context) =>
                                                 const LoginScreen()));
                                   }),
-                              const SizedBox(
+                              SizedBox(
                                 height: 20,
                               ),
-                              const Text(
-                                'Forgot password?',
-                                style: TextStyle(
-                                  color: kPrimaryColor,
-                                  fontFamily: 'OpenSans',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 20,
                               )
                             ],
@@ -107,10 +103,10 @@ class SignUpScreen extends StatelessWidget {
 
 switchListTile() {
   return Padding(
-    padding: const EdgeInsets.only(left: 50, right: 40),
+    padding: EdgeInsets.only(left: 50, right: 40),
     child: SwitchListTile(
       dense: true,
-      title: const Text(
+      title: Text(
         'Remember me',
         style: TextStyle(fontSize: 16, fontFamily: 'OpenSans'),
       ),
